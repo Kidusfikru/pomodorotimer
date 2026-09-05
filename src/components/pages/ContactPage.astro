@@ -16,141 +16,86 @@ const lang = (Astro.currentLocale ?? DEFAULT_LANG) as LangCode;
 		{t(lang, "contact.intro" as TranslationKey)}
 	</p>
 
-	<form id="contact-form" class="mt-8 space-y-5">
-		<div>
-			<label
-				for="contact-name"
-				class="mb-1.5 block text-sm font-bold text-ink"
-				data-i18n="contact.nameLabel"
-				>{t(lang, "contact.nameLabel" as TranslationKey)}</label
-			>
-			<input
-				id="contact-name"
-				name="name"
-				type="text"
-				required
-				data-i18n-placeholder="contact.namePlaceholder"
-				placeholder={t(lang, "contact.namePlaceholder" as TranslationKey)}
-				class="w-full rounded-2xl border-2 border-[color-mix(in_srgb,var(--ink)_12%,transparent)] bg-[color-mix(in_srgb,var(--surface)_85%,transparent)] px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-mute/70 focus:border-[var(--accent)]"
-			/>
-		</div>
-
-		<div>
-			<label
-				for="contact-email"
-				class="mb-1.5 block text-sm font-bold text-ink"
-				data-i18n="contact.emailLabel"
-				>{t(lang, "contact.emailLabel" as TranslationKey)}</label
-			>
-			<input
-				id="contact-email"
-				name="email"
-				type="email"
-				required
-				data-i18n-placeholder="contact.emailPlaceholder"
-				placeholder={t(lang, "contact.emailPlaceholder" as TranslationKey)}
-				class="w-full rounded-2xl border-2 border-[color-mix(in_srgb,var(--ink)_12%,transparent)] bg-[color-mix(in_srgb,var(--surface)_85%,transparent)] px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-mute/70 focus:border-[var(--accent)]"
-			/>
-		</div>
-
-		<div>
-			<label
-				for="contact-message"
-				class="mb-1.5 block text-sm font-bold text-ink"
-				data-i18n="contact.messageLabel"
-				>{t(lang, "contact.messageLabel" as TranslationKey)}</label
-			>
-			<textarea
-				id="contact-message"
-				name="message"
-				required
-				rows="5"
-				data-i18n-placeholder="contact.messagePlaceholder"
-				placeholder={t(lang, "contact.messagePlaceholder" as TranslationKey)}
-				class="w-full resize-y rounded-2xl border-2 border-[color-mix(in_srgb,var(--ink)_12%,transparent)] bg-[color-mix(in_srgb,var(--surface)_85%,transparent)] px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-mute/70 focus:border-[var(--accent)]"
-			></textarea>
-		</div>
-
-		<button
-			type="submit"
-			class="sticker-btn px-6 py-3 text-sm font-bold"
-			style="--btn-bg: var(--tomato-deep); --btn-ink: #fff; --btn-edge: color-mix(in srgb, var(--tomato-deep) 70%, #000)"
-			data-i18n="contact.submit"
-		>
-			{t(lang, "contact.submit" as TranslationKey)}
-		</button>
-
-		<p
-			id="contact-status"
-			role="status"
-			aria-live="polite"
-			class="hidden text-sm font-semibold"
-		></p>
-	</form>
-
-	<section
-		class="mt-10 rounded-2xl border-2 border-[color-mix(in_srgb,var(--ink)_10%,transparent)] bg-[color-mix(in_srgb,var(--surface)_80%,transparent)] p-5 sm:p-6"
-	>
-		<h2 class="mb-2 text-lg font-extrabold text-ink" data-i18n="contact.directTitle">
-			{t(lang, "contact.directTitle" as TranslationKey)}
-		</h2>
-		<p class="text-sm leading-relaxed text-body sm:text-base">
-			<span data-i18n="contact.directPrefix">{t(lang, "contact.directPrefix" as TranslationKey)}</span
-			>&nbsp;
+	<div class="mt-8 flex flex-col items-start gap-4">
+		<div class="flex flex-wrap items-center gap-3">
 			<a
 				href="mailto:hello@cutepomodorotimer.com"
-				class="font-semibold text-[var(--accent-ink)] underline decoration-[color-mix(in_srgb,var(--accent)_50%,transparent)] underline-offset-2 transition-colors hover:text-ink"
-				>hello@cutepomodorotimer.com</a
-			>. <span data-i18n="contact.directSuffix">{t(lang, "contact.directSuffix" as TranslationKey)}</span>
+				class="sticker-btn inline-flex items-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-bold"
+				style="--btn-bg: var(--tomato-deep); --btn-ink: #fff; --btn-edge: color-mix(in srgb, var(--tomato-deep) 70%, #000)"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<rect width="20" height="16" x="2" y="4" rx="2" />
+					<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+				</svg>
+				<span>hello@cutepomodorotimer.com</span>
+			</a>
+
+			<button
+				type="button"
+				id="copy-email-btn"
+				class="icon-btn"
+				data-i18n-aria="contact.copyEmail"
+				aria-label={t(lang, "contact.copyEmail" as TranslationKey)}
+				title={t(lang, "contact.copyEmail" as TranslationKey)}
+				data-copied-label={t(lang, "contact.copied" as TranslationKey)}
+				data-copy-label={t(lang, "contact.copyEmail" as TranslationKey)}
+			>
+				<svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+					<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+				</svg>
+				<svg id="check-icon" class="hidden text-[var(--sage)]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<polyline points="20 6 9 17 4 12"/>
+				</svg>
+			</button>
+		</div>
+
+		<p class="text-xs leading-relaxed text-mute sm:text-sm" data-i18n="contact.directSuffix">
+			{t(lang, "contact.directSuffix" as TranslationKey)}
 		</p>
-	</section>
+	</div>
 
 	<script>
-		import { getLang, t } from "../../lib/i18n/client";
+		const copyBtn = document.getElementById("copy-email-btn");
+		const copyIcon = document.getElementById("copy-icon");
+		const checkIcon = document.getElementById("check-icon");
 
-		const FORM_RESPONSE_URL =
-			"https://docs.google.com/forms/d/e/1FAIpQLScBz377ChYydEUdr8oM3Vs4j_6E3HrX5XiE-uvKpyID7AajDQ/formResponse";
-
-		const form = document.getElementById(
-			"contact-form",
-		) as HTMLFormElement | null;
-		const status = document.getElementById(
-			"contact-status",
-		) as HTMLParagraphElement | null;
-
-		async function sendFeedback() {
-			const lang = getLang();
-			const data = new FormData(form);
-			const body = new URLSearchParams();
-			body.set("entry.977470021", String(data.get("name") ?? "").trim());
-			body.set("entry.851782350", String(data.get("email") ?? "").trim());
-			body.set("entry.2138918765", String(data.get("message") ?? "").trim());
-			body.set("fvv", "1");
-			body.set("pageHistory", "0");
-			body.set("submit", "Submit");
-			await fetch(FORM_RESPONSE_URL, {
-				method: "POST",
-				mode: "no-cors",
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body,
-			});
-		}
-
-		form?.addEventListener("submit", async (e) => {
-			e.preventDefault();
-			if (!status) return;
-			status.classList.remove("hidden", "text-ink", "text-[var(--tomato-deep)]");
-			status.classList.add("text-ink");
-			status.textContent = t(getLang(), "contact.sending" as TranslationKey);
+		copyBtn?.addEventListener("click", async () => {
 			try {
-				await sendFeedback();
-				status.classList.replace("text-ink", "text-[var(--tomato-deep)]");
-				status.textContent = t(getLang(), "contact.success" as TranslationKey);
-				form.reset();
+				if (navigator.clipboard && window.isSecureContext) {
+					await navigator.clipboard.writeText("hello@cutepomodorotimer.com");
+				} else {
+					throw new Error("fallback");
+				}
 			} catch {
-				status.classList.replace("text-ink", "text-[var(--tomato-deep)]");
-				status.textContent = t(getLang(), "contact.error" as TranslationKey);
+				const textArea = document.createElement("textarea");
+				textArea.value = "hello@cutepomodorotimer.com";
+				textArea.style.position = "fixed";
+				textArea.style.opacity = "0";
+				document.body.appendChild(textArea);
+				textArea.focus();
+				textArea.select();
+				try {
+					document.execCommand("copy");
+				} catch {}
+				document.body.removeChild(textArea);
 			}
+			copyIcon?.classList.add("hidden");
+			checkIcon?.classList.remove("hidden");
+			const copiedLabel = copyBtn?.dataset.copiedLabel;
+			if (copyBtn && copiedLabel) {
+				copyBtn.setAttribute("aria-label", copiedLabel);
+				copyBtn.setAttribute("title", copiedLabel);
+			}
+			setTimeout(() => {
+				copyIcon?.classList.remove("hidden");
+				checkIcon?.classList.add("hidden");
+				const copyLabel = copyBtn?.dataset.copyLabel;
+				if (copyBtn && copyLabel) {
+					copyBtn.setAttribute("aria-label", copyLabel);
+					copyBtn.setAttribute("title", copyLabel);
+				}
+			}, 2000);
 		});
 	</script>
 </PageLayout>

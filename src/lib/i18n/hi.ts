@@ -272,7 +272,7 @@ const hi: Record<TranslationKey, string> = {
 
 	/* Contact body */
 	'contact.intro':
-		'सवाल, फ़ीचर विचार, या बस टमाटर पॉमी को बताना चाहते हैं कि वह बहुत अच्छा काम कर रहा है? हमें आपसे सुनकर सचमुच खुशी होगी। फ़ॉर्म भरें और हम आपको जवाब देंगे — कोई खाता नहीं, कोई ट्रैकिंग नहीं, कोई झंझट नहीं।',
+		'सवाल, फ़ीचर विचार, या बस टमाटर पॉमी को बताना चाहते हैं कि वह बहुत अच्छा काम कर रहा है? हमें आपसे सुनकर सचमुच खुशी होगी।',
 	'contact.nameLabel': 'आपका नाम',
 	'contact.namePlaceholder': 'पॉमी द टमाटर',
 	'contact.emailLabel': 'आपका ईमेल',
@@ -286,6 +286,8 @@ const hi: Record<TranslationKey, string> = {
 	'contact.directTitle': 'सीधे ईमेल करना पसंद करेंगे?',
 	'contact.directPrefix': 'आप हमेशा हमें यहाँ लिख सकते हैं',
 	'contact.directSuffix': 'हम हर संदेश पढ़ते हैं और जैसे ही पॉमी हमें ब्रेक की इजाज़त देता है, जवाब देते हैं।',
+	'contact.copyEmail': 'ईमेल पता कॉपी करें',
+	'contact.copied': 'कॉपी हो गया!',
 	'contact.subjectFrom': 'से संदेश',
 	'contact.subjectFallback': 'एक दोस्ताना आगंतुक',
 	'contact.bodyName': 'नाम',

@@ -291,7 +291,7 @@ const de: Record<TranslationKey, string> = {
 
 	/* Contact body */
 	'contact.intro':
-		'Fragen, Feature-Ideen, oder du willst Pommy der Tomate einfach sagen, dass sie einen tollen Job macht? Wir freuen uns wirklich über jede Nachricht. Fülle das Formular aus und wir melden uns bei dir — ohne Konto, ohne Tracking, ohne Umstände.',
+		'Fragen, Feature-Ideen, oder du willst Pommy der Tomate einfach sagen, dass sie einen tollen Job macht? Wir freuen uns wirklich über jede Nachricht.',
 	'contact.nameLabel': 'Dein Name',
 	'contact.namePlaceholder': 'Pommy die Tomate',
 	'contact.emailLabel': 'Deine E-Mail',
@@ -305,6 +305,8 @@ const de: Record<TranslationKey, string> = {
 	'contact.directTitle': 'Lieber direkt per E-Mail?',
 	'contact.directPrefix': 'Du kannst uns jederzeit schreiben an',
 	'contact.directSuffix': 'Wir lesen jede Nachricht und antworten, sobald Pommy uns eine Pause erlaubt.',
+	'contact.copyEmail': 'E-Mail-Adresse kopieren',
+	'contact.copied': 'Kopiert!',
 	'contact.subjectFrom': 'Nachricht von',
 	'contact.subjectFallback': 'einem freundlichen Besucher',
 	'contact.bodyName': 'Name',

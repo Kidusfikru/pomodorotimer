@@ -291,7 +291,7 @@ const fr: Record<TranslationKey, string> = {
 
 	/* Contact body */
 	'contact.intro':
-		'Des questions, des idées de fonctionnalités, ou juste envie de dire à Pommy la tomate qu’elle fait un super travail ? Nous serions sincèrement ravis de vous lire. Remplissez le formulaire et nous vous répondrons — pas de compte, pas de suivi, pas de prise de tête.',
+		'Des questions, des idées de fonctionnalités, ou juste envie de dire à Pommy la tomate qu’elle fait un super travail ? Nous serions sincèrement ravis de vous lire.',
 	'contact.nameLabel': 'Votre nom',
 	'contact.namePlaceholder': 'Pommy la Tomate',
 	'contact.emailLabel': 'Votre e-mail',
@@ -305,6 +305,8 @@ const fr: Record<TranslationKey, string> = {
 	'contact.directTitle': 'Vous préférez écrire directement ?',
 	'contact.directPrefix': 'Vous pouvez toujours nous écrire à',
 	'contact.directSuffix': 'Nous lisons chaque message et répondons dès que Pommy nous autorise une pause.',
+	'contact.copyEmail': 'Copier l’adresse e-mail',
+	'contact.copied': 'Copié !',
 	'contact.subjectFrom': 'Message de',
 	'contact.subjectFallback': 'un visiteur sympathique',
 	'contact.bodyName': 'Nom',

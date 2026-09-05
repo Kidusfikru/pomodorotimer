@@ -281,7 +281,7 @@ const ja: Record<TranslationKey, string> = {
 
 	/* Contact body */
 	'contact.intro':
-		'質問、機能のアイデア、または単にトマトのポミーに「すごくいい仕事をしているよ」と伝えたいだけでも、ぜひお聞かせください。フォームに記入していただければ、こちらからご連絡します — アカウントもトラッキングも手間もありません。',
+		'質問、機能のアイデア、または単にトマトのポミーに「すごくいい仕事をしているよ」と伝えたいだけでも、ぜひお聞かせください。',
 	'contact.nameLabel': 'お名前',
 	'contact.namePlaceholder': 'ポミー・ザ・トマト',
 	'contact.emailLabel': 'メールアドレス',
@@ -295,6 +295,8 @@ const ja: Record<TranslationKey, string> = {
 	'contact.directTitle': '直接メールしたいですか？',
 	'contact.directPrefix': 'いつでもこちらまでご連絡いただけます',
 	'contact.directSuffix': '私たちはすべてのメッセージを読み、ポミーが休憩を許してくれたらすぐにお返事します。',
+	'contact.copyEmail': 'メールアドレスをコピー',
+	'contact.copied': 'コピーしました！',
 	'contact.subjectFrom': 'からのメッセージ',
 	'contact.subjectFallback': '親しみのある訪問者',
 	'contact.bodyName': '名前',

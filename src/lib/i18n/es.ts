@@ -281,7 +281,7 @@ const es: Record<TranslationKey, string> = {
 
 	/* Contact body */
 	'contact.intro':
-		'¿Preguntas, ideas de funciones, o solo quieres decirle a Pommy el tomate que está haciendo un gran trabajo? Nos encantaría saber de ti de verdad. Llena el formulario y te responderemos — sin cuenta, sin seguimiento, sin complicaciones.',
+		'¿Preguntas, ideas de funciones, o solo quieres decirle a Pommy el tomate que está haciendo un gran trabajo? Nos encantaría saber de ti de verdad.',
 	'contact.nameLabel': 'Tu nombre',
 	'contact.namePlaceholder': 'Pommy el Tomate',
 	'contact.emailLabel': 'Tu correo electrónico',
@@ -295,6 +295,8 @@ const es: Record<TranslationKey, string> = {
 	'contact.directTitle': '¿Prefieres escribirnos directamente?',
 	'contact.directPrefix': 'Siempre puedes escribirnos a',
 	'contact.directSuffix': 'Leemos cada mensaje y respondemos en cuanto Pommy nos deja tomar un descanso.',
+	'contact.copyEmail': 'Copiar dirección de correo',
+	'contact.copied': '¡Copiado!',
 	'contact.subjectFrom': 'Mensaje de',
 	'contact.subjectFallback': 'un visitante amigable',
 	'contact.bodyName': 'Nombre',

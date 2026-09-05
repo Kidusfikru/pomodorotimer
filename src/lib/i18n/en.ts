@@ -292,7 +292,7 @@ export const en = {
 
 	/* Contact body */
 	'contact.intro':
-		'Questions, feature ideas, or just want to tell Pommy the tomato that she’s doing a great job? We’d genuinely love to hear from you. Fill out the form and we’ll get back to you — no account, no tracking, no fuss.',
+		'Questions, feature ideas, or just want to tell Pommy the tomato that she’s doing a great job? We’d genuinely love to hear from you.',
 	'contact.nameLabel': 'Your name',
 	'contact.namePlaceholder': 'Pommy the Tomato',
 	'contact.emailLabel': 'Your email',
@@ -306,6 +306,8 @@ export const en = {
 	'contact.directTitle': 'Prefer to email directly?',
 	'contact.directPrefix': 'You can always write to us at',
 	'contact.directSuffix': 'We read every message and reply as soon as Pommy lets us take a break.',
+	'contact.copyEmail': 'Copy email address',
+	'contact.copied': 'Copied!',
 	'contact.subjectFrom': 'Message from',
 	'contact.subjectFallback': 'a friendly visitor',
 	'contact.bodyName': 'Name',
