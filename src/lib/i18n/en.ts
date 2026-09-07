@@ -130,7 +130,7 @@ export const en = {
 		"Unlike a plain online pomodoro timer, this free pomodoro timer is a complete focus toolkit. Add tasks to the to-do list and your current goal appears right beneath the countdown, so you never lose sight of what matters. Switch between focus, short break, and long break whenever you like, or let auto-breaks take over. Turn on the chime, enable browser notifications, and let the pink cute timer watch over you while you work. The cute timer aesthetic carries through everything — the pastel ring, twinkling sparkles, and floating hearts — in both light and dark mode. Because it lives in the browser, a cute timer for study works on laptops, tablets, and phones alike. It is a cute timer website, a cute timer app, and a pomodoro timer app all in one.",
 	'page.sec5Title': "A Free Online Pomodoro Timer You'll Actually Want to Use",
 	'page.sec5Body':
-		"Best of all, this free pomodoro timer costs absolutely nothing. There is no sign-up, no ads, and no app store — just open the page and press start. If you've been hunting for an aesthetic pomodoro timer or a pomodoro cute timer that matches your vibe, bookmark this page and make it your daily focus companion. Whether you need a 10 minute cute timer, a 15 minute cute timer, or a 30 minute cute timer for a big project, there is always a cute timer ready when you are. Press start, let the cutest timer on the web keep you company, and get things done — one lovely little countdown at a time.",
+		"Best of all, this free pomodoro timer costs absolutely nothing. There is no sign-up and no app store — just open the page and press start. If you've been hunting for an aesthetic pomodoro timer or a pomodoro cute timer that matches your vibe, bookmark this page and make it your daily focus companion. Whether you need a 10 minute cute timer, a 15 minute cute timer, or a 30 minute cute timer for a big project, there is always a cute timer ready when you are. Press start, let the cutest timer on the web keep you company, and get things done — one lovely little countdown at a time.",
 	'page.faqEyebrow': 'Pomodoro FAQ',
 	'page.faqTitle': 'Pomodoro Timer FAQ',
 	'page.faq0q': 'What is a Pomodoro timer?',
@@ -232,7 +232,7 @@ export const en = {
 		'Our mascot is a tiny blushing tomato named Pommy. Pommy nods along while you focus, blinks during breaks, and celebrates when your round is complete. It’s a gentle reminder that the original pomodoro was just a tomato-shaped kitchen timer — and that focus doesn’t have to be serious all the time.',
 	'about.sec4Title': 'Our values',
 	'about.sec4Body':
-		'Free forever. No sign-up, no ads, no accounts. Everything you set — your timer lengths, your to-do list, your music preference — is stored only in your own browser, so you stay in control. We build in the open, keep the interface simple, and always put your focus first.',
+		'Free forever. No sign-up, no accounts. Everything you set — your timer lengths, your to-do list, your music preference — is stored only in your own browser, so you stay in control. We build in the open, keep the interface simple, and always put your focus first.',
 	'about.thanksTitle': 'Thank you, lovely people ♡',
 	'about.thanksBody':
 		'Every day, someone opens the Cute Timer, and some of you go a little further — suggesting helpful features, sharing feedback, and helping us make focusing a bit friendlier. Thank you, from all of us. You make this little tomato’s day.',
