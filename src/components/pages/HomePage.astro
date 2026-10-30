@@ -117,8 +117,7 @@ const faqSchema = {
 					<h2 class="mb-3 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.sec4Title">
 						{t(lang, 'page.sec4Title')}
 					</h2>
-					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec4Body">
-						{t(lang, 'page.sec4Body')}
+					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec4Body" set:html={t(lang, 'page.sec4Body')}>
 					</p>
 				</section>
 
