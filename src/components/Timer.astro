@@ -8,7 +8,7 @@ import Mascot from './Mascot.astro';
 	<div class="glass flex items-center gap-2 rounded-full px-4 py-1.5">
 		<span data-phase-icon="focus" class="text-[var(--accent)]"><Icon name="leaf" size={14} /></span>
 		<span data-phase-icon="break" class="hidden text-[var(--accent)]"><Icon name="coffee" size={14} /></span>
-		<span class="eyebrow text-[var(--accent-ink)]" data-phase-label aria-live="polite">Focus time!</span>
+		<span class="phase-label eyebrow text-[var(--accent-ink)]" data-phase-label aria-live="polite">Focus time!</span>
 		<span class="text-[var(--accent)]"><Icon name="sparkle" size={12} /></span>
 	</div>
 
@@ -201,6 +201,25 @@ import Mascot from './Mascot.astro';
 		color: var(--accent-ink);
 		border-color: color-mix(in srgb, var(--accent-ink) 35%, transparent);
 		box-shadow: 0 3px 0 color-mix(in srgb, var(--accent-ink) 22%, transparent);
+	}
+
+	.phase-label {
+		display: inline-block;
+		transition: font-size 0.25s ease;
+	}
+	:global(body[data-phase='break']) .phase-label {
+		font-size: clamp(0.9rem, 3.8vw, 1.2rem);
+		font-weight: 900;
+		animation: phase-praise-pulse 1.6s ease-in-out infinite;
+	}
+	@keyframes phase-praise-pulse {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.06);
+		}
 	}
 
 	.dot {

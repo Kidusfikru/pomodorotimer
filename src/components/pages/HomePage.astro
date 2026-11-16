@@ -8,43 +8,15 @@ import SettingsPanel from '../../components/SettingsPanel.astro';
 import Dock from '../../components/Dock.astro';
 import SpotifyPanel from '../../components/SpotifyPanel.astro';
 import Footer from '../../components/Footer.astro';
-import { t, DEFAULT_LANG, type LangCode, type TranslationKey } from '../../lib/i18n';
+import { t, DEFAULT_LANG, type LangCode } from '../../lib/i18n';
 
 const lang = (Astro.currentLocale ?? DEFAULT_LANG) as LangCode;
-
-const faqKeys = [
-	['page.faq0q', 'page.faq0a'],
-	['page.faq1q', 'page.faq1a'],
-	['page.faq2q', 'page.faq2a'],
-	['page.faq3q', 'page.faq3a'],
-	['page.faq4q', 'page.faq4a'],
-	['page.faq5q', 'page.faq5a'],
-	['page.faq6q', 'page.faq6a'],
-	['page.faq7q', 'page.faq7a'],
-	['page.faq8q', 'page.faq8a'],
-	['page.faq9q', 'page.faq9a'],
-	['page.faq10q', 'page.faq10a'],
-] as const;
-
-const faqSchema = {
-	'@context': 'https://schema.org',
-	'@type': 'FAQPage',
-	mainEntity: faqKeys.map(([q, a]) => ({
-		'@type': 'Question',
-		name: t(lang, q),
-		acceptedAnswer: {
-			'@type': 'Answer',
-			text: `<p>${t(lang, a)}</p>`,
-		},
-	})),
-};
 ---
 
-<Layout title={t(lang, 'title.seo')} description={t(lang, 'meta.homeDesc')}>
-	<Fragment slot="head">
-		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-	</Fragment>
-
+<Layout
+	title="Abby's Pomodoro — A Little Focus, A Lot of Encouragement"
+	description="A cozy Pomodoro timer made just for Abby, with gentle music, a sweet little mascot, and room for everything she's working toward."
+>
 	<a
 		href="#main"
 		class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink"
@@ -56,7 +28,10 @@ const faqSchema = {
 
 	<main id="main" class="relative">
 		<div class="flex min-h-dvh flex-col items-center justify-center px-4 pb-[calc(6rem+env(safe-area-inset-bottom))] pt-[calc(4.5rem+env(safe-area-inset-top))] [justify-content:safe_center] [@media(min-height:920px)]:pb-[calc(7.5rem+env(safe-area-inset-bottom))] [@media(min-height:920px)]:pt-[calc(5.5rem+env(safe-area-inset-top))] [@media(max-height:720px)]:pb-[calc(5.5rem+env(safe-area-inset-bottom))] [@media(max-height:720px)]:pt-[calc(3.5rem+env(safe-area-inset-top))] [@media(max-height:520px)]:pb-[calc(4.75rem+env(safe-area-inset-bottom))] [@media(max-height:520px)]:pt-[calc(2.5rem+env(safe-area-inset-top))]">
-			<h1 class="sr-only" data-i18n="page.h1">{t(lang, 'page.h1')}</h1>
+			<h1 class="sr-only">Abby's Pomodoro — made just for Abby</h1>
+			<p class="mb-1 inline-flex items-center gap-2 rounded-full border border-[color-mix(in_srgb,var(--tomato)_28%,transparent)] bg-[color-mix(in_srgb,var(--surface)_82%,transparent)] px-4 py-2 text-sm font-bold text-[var(--accent-ink)] shadow-sm [@media(max-height:520px)]:hidden">
+				Made just for you, Abby <span aria-hidden="true" class="text-[var(--tomato)]">♡</span>
+			</p>
 			<Timer />
 			<p class="mt-4 hidden text-xs text-mute/80 sm:mt-5 md:block [@media(max-height:720px)]:mt-2.5 [@media(max-height:520px)]:hidden">
 				<span class="font-semibold">space</span> <span data-i18n="page.hintStart">{t(lang, 'page.hintStart')}</span>
@@ -66,125 +41,8 @@ const faqSchema = {
 				&middot; <span class="font-semibold">f</span> <span data-i18n="page.hintFullscreen">{t(lang, 'page.hintFullscreen')}</span>
 				<span class="text-[var(--accent)]">♡</span>
 			</p>
-			<p class="mt-7 text-sm font-bold sm:mt-8 md:mt-2.5 [@media(max-height:720px)]:mt-2 [@media(max-height:720px)]:text-xs">
-				<a href="/embed" class="text-[var(--tomato-deep)] dark:text-[var(--tomato)] underline decoration-2 underline-offset-4 transition-colors hover:text-ink" data-i18n="page.embedCta">
-					{t(lang, 'page.embedCta')}
-				</a>
-			</p>
 		</div>
-
-		<!-- SEO content -->
-		<section class="mx-auto w-full max-w-3xl px-4 pb-28 sm:px-6">
-			<div class="glass space-y-8 px-6 py-8 sm:px-10 sm:py-10">
-				<p class="eyebrow text-[var(--accent-ink)]">
-					<span data-i18n="page.aboutEyebrow">{t(lang, 'page.aboutEyebrow')}</span> ♡
-				</p>
-
-				<section>
-					<h2 class="mb-3 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.sec1Title">
-						{t(lang, 'page.sec1Title')}
-					</h2>
-					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec1Body">
-						{t(lang, 'page.sec1Body')}
-					</p>
-				</section>
-
-				<div class="h-px w-full bg-[color-mix(in_srgb,var(--ink)_12%,transparent)]"></div>
-
-				<section>
-					<h2 class="mb-3 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.sec2Title">
-						{t(lang, 'page.sec2Title')}
-					</h2>
-					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec2Body">
-						{t(lang, 'page.sec2Body')}
-					</p>
-				</section>
-
-				<div class="h-px w-full bg-[color-mix(in_srgb,var(--ink)_12%,transparent)]"></div>
-
-				<section>
-					<h2 class="mb-3 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.sec3Title">
-						{t(lang, 'page.sec3Title')}
-					</h2>
-					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec3Body">
-						{t(lang, 'page.sec3Body')}
-					</p>
-				</section>
-
-				<div class="h-px w-full bg-[color-mix(in_srgb,var(--ink)_12%,transparent)]"></div>
-
-				<section>
-					<h2 class="mb-3 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.sec4Title">
-						{t(lang, 'page.sec4Title')}
-					</h2>
-					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec4Body" set:html={t(lang, 'page.sec4Body')}>
-					</p>
-				</section>
-
-				<div class="h-px w-full bg-[color-mix(in_srgb,var(--ink)_12%,transparent)]"></div>
-
-				<section>
-					<h2 class="mb-3 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.sec5Title">
-						{t(lang, 'page.sec5Title')}
-					</h2>
-					<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n="page.sec5Body">
-						{t(lang, 'page.sec5Body')}
-					</p>
-				</section>
-
-				<div class="h-px w-full bg-[color-mix(in_srgb,var(--ink)_12%,transparent)]"></div>
-
-				<section aria-labelledby="faq-heading">
-					<p class="eyebrow text-[var(--accent-ink)]">
-						<span data-i18n="page.faqEyebrow">{t(lang, 'page.faqEyebrow')}</span> ♡
-					</p>
-					<h2 id="faq-heading" class="mb-3 mt-2 text-2xl font-extrabold leading-snug text-ink sm:text-3xl" data-i18n="page.faqTitle">
-						{t(lang, 'page.faqTitle')}
-					</h2>
-					<div class="space-y-3">
-						{
-							faqKeys.map(([q, a], i) => (
-								<details
-									name="faq"
-									class="group overflow-hidden rounded-2xl border-2 border-[color-mix(in_srgb,var(--ink)_10%,transparent)] bg-[color-mix(in_srgb,var(--surface)_80%,transparent)]"
-								>
-									<summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 transition-colors hover:bg-[color-mix(in_srgb,var(--ink)_4%,transparent)] [&::-webkit-details-marker]:hidden">
-										<h3 class="text-base font-bold leading-snug text-ink sm:text-lg" data-i18n={q}>{t(lang, q)}</h3>
-										<span
-											class="shrink-0 text-lg leading-none text-[var(--accent)] transition-transform duration-200 group-open:rotate-45"
-											aria-hidden="true"
-											>+</span
-										>
-									</summary>
-									<div class="px-5 pb-5">
-										<p class="text-sm leading-relaxed text-body sm:text-base" data-i18n={a}>{t(lang, a)}</p>
-									</div>
-								</details>
-							))
-						}
-					</div>
-				</section>
-			</div>
-		</section>
 	</main>
-
-	<script>
-		// Accordion fallback for browsers that don't support the `name` attribute on <details>
-		if (!('name' in HTMLDetailsElement.prototype)) {
-			document.querySelectorAll<HTMLDetailsElement>('details[name]').forEach((detail) => {
-				detail.addEventListener('toggle', () => {
-					if (detail.open) {
-						const name = detail.getAttribute('name');
-						document.querySelectorAll<HTMLDetailsElement>(`details[name="${name}"]`).forEach((other) => {
-							if (other !== detail && other.open) {
-								other.open = false;
-							}
-						});
-					}
-				});
-			});
-		}
-	</script>
 
 	<Footer />
 

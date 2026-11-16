@@ -1,6 +1,6 @@
 {
-  "name": "Cute Tomato Timer",
-  "short_name": "Timer",
+  "name": "Abby's Pomodoro",
+  "short_name": "Abby's Timer",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

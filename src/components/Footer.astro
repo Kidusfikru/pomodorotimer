@@ -1,90 +1,31 @@
 ---
-import Icon from './Icon.astro';
 import Mascot from './Mascot.astro';
-import { t, DEFAULT_LANG, localizePath, type LangCode, type TranslationKey } from '../lib/i18n';
-
-const links = [
-	{ href: '/', key: 'footer.home', external: false },
-	{ href: '/about/', key: 'footer.about', external: true },
-	{ href: '/privacy-policy/', key: 'footer.privacy', external: true },
-	{ href: '/terms/', key: 'footer.terms', external: true },
-	{ href: '/contact/', key: 'footer.contact', external: true },
-] as const;
-
-const GITHUB_URL = 'https://github.com/nvzard/cutepomodorotimer.com';
+import { t, DEFAULT_LANG, type LangCode } from '../lib/i18n';
 
 const lang = (Astro.currentLocale ?? DEFAULT_LANG) as LangCode;
 const year = new Date().getFullYear();
 ---
 
 <footer class="relative z-10 border-t-2 border-[color-mix(in_srgb,var(--ink)_10%,transparent)]">
-	<div class="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6">
-		<div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:justify-between">
-			<div class="flex max-w-xs flex-col items-center gap-3 text-center sm:items-start sm:text-left">
-				<a data-i18n-href="/" href={localizePath(lang, '/')} class="group flex items-center gap-2.5" data-i18n-aria="brand.homeAria" aria-label={t(lang, 'brand.homeAria')}>
-					<span
-						class="grid h-9 w-9 place-items-center rounded-full border-2 border-[color-mix(in_srgb,var(--tomato)_55%,transparent)] bg-[var(--tomato-soft)] shadow-[0_3px_0_color-mix(in_srgb,var(--tomato)_35%,transparent)] transition-transform group-hover:-rotate-6 group-hover:scale-110"
-					>
-						<Mascot class="h-7 w-full" />
-					</span>
-					<span class="text-base font-bold tracking-tight text-ink">
-						<span data-i18n="brand.title">{t(lang, 'brand.title')}</span> <span class="text-[var(--tomato)]">♡</span>
-					</span>
-				</a>
-				<p class="text-xs leading-relaxed text-mute" data-i18n="footer.tagline">
-					{t(lang, 'footer.tagline')}
-				</p>
-			</div>
-
-			<nav aria-label="Footer" data-i18n-aria="footer.linksAria">
-				<p class="eyebrow mb-3 text-center text-[var(--accent-ink)] sm:text-left">
-					<span data-i18n="footer.links">{t(lang, 'footer.links')}</span> ♡
-				</p>
-				<ul class="flex flex-col items-center gap-2.5 sm:items-start">
-					{links.map(({ href, key, external }) => (
-						<li>
-							<a
-								data-i18n-href={href}
-								href={localizePath(lang, href)}
-								target={external ? '_blank' : undefined}
-								rel={external ? 'noopener' : undefined}
-								class="group inline-flex items-center gap-1.5 text-sm font-semibold text-body transition-colors hover:text-ink"
-							>
-								<span class="text-[var(--accent)] opacity-0 transition-opacity group-hover:opacity-100">♡</span>
-								<span data-i18n={key}>{t(lang, key as TranslationKey)}</span>
-							</a>
-						</li>
-					))}
-					<li>
-						<a
-							href="/embed"
-							class="group inline-flex items-center gap-1.5 text-sm font-semibold text-body transition-colors hover:text-ink"
-						>
-							<span class="text-[var(--accent)] opacity-0 transition-opacity group-hover:opacity-100">♡</span>
-							<span data-i18n="footer.embed">{t(lang, 'footer.embed')}</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href={GITHUB_URL}
-							target="_blank"
-							rel="noopener"
-							class="group inline-flex items-center gap-1.5 text-sm font-semibold text-body transition-colors hover:text-ink"
-						>
-							<span class="text-[var(--accent)] opacity-0 transition-opacity group-hover:opacity-100">♡</span>
-							<span data-i18n="footer.github">{t(lang, 'footer.github')}</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
+	<div class="mx-auto flex w-full max-w-3xl flex-col items-center gap-5 px-4 py-8 text-center sm:px-6">
+		<div class="flex flex-col items-center gap-2">
+			<span
+				class="grid h-10 w-10 place-items-center rounded-full border-2 border-[color-mix(in_srgb,var(--tomato)_55%,transparent)] bg-[var(--tomato-soft)] shadow-[0_3px_0_color-mix(in_srgb,var(--tomato)_35%,transparent)]"
+			>
+				<Mascot class="h-8 w-full" />
+			</span>
+			<p class="text-base font-bold tracking-tight text-ink">
+				<span data-i18n="brand.title">{t(lang, 'brand.title')}</span> <span class="text-[var(--tomato)]">♡</span>
+			</p>
+			<p class="text-xs leading-relaxed text-mute">A cozy little focus space, made especially for Abby.</p>
 		</div>
 
-		<div class="mt-8 flex flex-col items-center gap-2 border-t border-[color-mix(in_srgb,var(--ink)_10%,transparent)] pt-6 sm:flex-row sm:justify-between">
+		<div class="flex flex-col items-center gap-2 border-t border-[color-mix(in_srgb,var(--tomato)_24%,transparent)] pt-5">
 			<p class="text-xs text-mute">
-				© {year} Cute Pomodoro Timer. <span data-i18n="footer.rights">{t(lang, 'footer.rights')}</span>
+				© {year} Abby's Pomodoro. <span data-i18n="footer.rights">{t(lang, 'footer.rights')}</span>
 			</p>
 			<p class="flex items-center gap-1.5 text-xs text-mute">
-				Made with <span class="text-[var(--tomato)]">♡</span>
+				Made especially for Abby <span class="text-[var(--tomato)]">♡</span>
 			</p>
 		</div>
 	</div>

@@ -1,8 +1,8 @@
 import type { TranslationKey } from './en';
 
 const ja: Record<TranslationKey, string> = {
-	'brand.title': 'Cute Pomodoro',
-	'brand.homeAria': 'Cute Pomodoro タイマーのホーム',
+	'brand.title': "Abby's Pomodoro",
+	'brand.homeAria': "Abby's Pomodoro のホーム",
 	'topbar.langAria': '言語を変更',
 	'topbar.themeAria': 'ダークモードを切り替え',
 	'topbar.settingsAria': '設定を開く',
@@ -88,8 +88,8 @@ const ja: Record<TranslationKey, string> = {
 	'title.focus': 'フォーカス',
 	'title.short': 'ショートブレイク',
 	'title.long': 'ロングブレイク',
-	'title.app': 'Cute Timer',
-	'title.seo': 'Cute Timer — 勉強用のかわいいポモドーロタイマーオンライン',
+	'title.app': "Abby's Pomodoro",
+	'title.seo': "Abby's Pomodoro — A Little Focus, A Lot of Encouragement",
 
 	'notify.focusComplete': 'フォーカス完了',
 	'notify.snackMessage': 'やったね！おやつブレイクの時間です ♡',

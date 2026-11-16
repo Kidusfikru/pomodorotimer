@@ -1,8 +1,8 @@
 import type { TranslationKey } from './en';
 
 const hi: Record<TranslationKey, string> = {
-	'brand.title': 'Cute Pomodoro',
-	'brand.homeAria': 'Cute Pomodoro टाइमर होम',
+	'brand.title': "Abby's Pomodoro",
+	'brand.homeAria': "Abby's Pomodoro होम",
 	'topbar.langAria': 'भाषा बदलें',
 	'topbar.themeAria': 'डार्क मोड चालू/बंद करें',
 	'topbar.settingsAria': 'सेटिंग्स खोलें',
@@ -82,8 +82,8 @@ const hi: Record<TranslationKey, string> = {
 	'title.focus': 'फ़ोकस',
 	'title.short': 'छोटा ब्रेक',
 	'title.long': 'लंबा ब्रेक',
-	'title.app': 'Cute Timer',
-	'title.seo': 'Cute Timer — पढ़ाई के लिए ऑनलाइन Cute Pomodoro टाइमर',
+	'title.app': "Abby's Pomodoro",
+	'title.seo': "Abby's Pomodoro — A Little Focus, A Lot of Encouragement",
 	'notify.focusComplete': 'फ़ोकस पूरा हुआ',
 	'notify.snackMessage': 'वाह! नाश्ते के ब्रेक का समय ♡',
 	'notify.napMessage': 'वाह! झपकी के ब्रेक का समय ♡',

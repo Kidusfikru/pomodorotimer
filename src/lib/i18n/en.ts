@@ -1,7 +1,7 @@
 export const en = {
 	/* Brand / TopBar */
-	'brand.title': 'Cute Pomodoro',
-	'brand.homeAria': 'Cute Pomodoro Timer home',
+	'brand.title': "Abby's Pomodoro",
+	'brand.homeAria': "Abby's Pomodoro home",
 	'topbar.langAria': 'Change language',
 	'topbar.themeAria': 'Toggle dark mode',
 	'topbar.settingsAria': 'Open settings',
@@ -21,8 +21,8 @@ export const en = {
 	'timer.resetAria': 'Reset timer',
 	'timer.skipAria': 'Skip to next phase',
 	'phase.focus': 'Focus time!',
-	'phase.short': 'Snack time',
-	'phase.long': 'Nap time ♡',
+	'phase.short': 'Good job, Abby baby! ♡',
+	'phase.long': 'Good job, Abby baby! ♡',
 	'btn.start': 'Start',
 	'btn.pause': 'Pause',
 	'btn.resume': 'Resume',
@@ -93,15 +93,15 @@ export const en = {
 	'title.focus': 'Focus',
 	'title.short': 'Short Break',
 	'title.long': 'Long Break',
-	'title.app': 'Cute Timer',
-	'title.seo': 'Cute Timer — Cute Pomodoro Timer Online for Studying',
+	'title.app': "Abby's Pomodoro",
+	'title.seo': "Abby's Pomodoro — A Little Focus, A Lot of Encouragement",
 
 	/* Notifications */
-	'notify.focusComplete': 'Focus complete',
-	'notify.snackMessage': 'Yay! Time for a snack break ♡',
-	'notify.napMessage': 'Yay! Time for a nap break ♡',
-	'notify.breakOver': 'Break over',
-	'notify.breakMessage': 'Round two? You got this! ♡',
+	'notify.focusComplete': 'Good job, Abby baby! ♡',
+	'notify.snackMessage': 'You finished a Pomodoro. Enjoy your sweet little break ♡',
+	'notify.napMessage': 'You finished four Pomodoros. Rest well, Abby baby ♡',
+	'notify.breakOver': "Break's over, Abby baby!",
+	'notify.breakMessage': "Ready for another round? I'm cheering for you ♡",
 
 	/* Shortcut labels */
 	'shortcut.light': 'light mode',
@@ -202,7 +202,7 @@ export const en = {
 	'contact.title': 'Contact Us',
 	'contact.metaTitle': 'Contact Us — Cute Timer | Cute Pomodoro Timer',
 	'contact.metaDesc':
-		"Get in touch with the Cute Timer team. Questions, feedback, or just to say hi to Pommy the tomato — we'd love to hear from you.",
+		"Get in touch with the Cute Timer team. Questions, feedback, or just to say hi to Pommy the tomato — we'd be happy to hear from you.",
 	'terms.eyebrow': 'Fair and friendly ♡',
 	'terms.title': 'Terms & Conditions',
 	'terms.metaTitle': 'Terms & Conditions — Cute Timer | Cute Pomodoro Timer',
@@ -263,7 +263,7 @@ export const en = {
 	'privacy.sec7Body':
 		'We may update this policy from time to time. When we do, we’ll revise the "last updated" date above. Please check back here for the latest version.',
 	'privacy.sec8Title': 'Contact',
-	'privacy.sec8Prefix': 'Questions about privacy? We’d love to hear from you at',
+	'privacy.sec8Prefix': 'Questions about privacy? Please contact us at',
 
 	/* Terms body */
 	'terms.introAfterDate': 'By accessing or using',
@@ -292,7 +292,7 @@ export const en = {
 
 	/* Contact body */
 	'contact.intro':
-		'Questions, feature ideas, or just want to tell Pommy the tomato that she’s doing a great job? We’d genuinely love to hear from you.',
+		'Questions, feature ideas, or just want to tell Pommy the tomato that she’s doing a great job? We’d be glad to hear from you.',
 	'contact.nameLabel': 'Your name',
 	'contact.namePlaceholder': 'Pommy the Tomato',
 	'contact.emailLabel': 'Your email',

@@ -1,8 +1,8 @@
 import type { TranslationKey } from './en';
 
 const es: Record<TranslationKey, string> = {
-	'brand.title': 'Cute Pomodoro',
-	'brand.homeAria': 'Inicio de Cute Pomodoro Timer',
+	'brand.title': "Abby's Pomodoro",
+	'brand.homeAria': "Inicio de Abby's Pomodoro",
 	'topbar.langAria': 'Cambiar idioma',
 	'topbar.themeAria': 'Cambiar a modo oscuro',
 	'topbar.settingsAria': 'Abrir ajustes',
@@ -88,8 +88,8 @@ const es: Record<TranslationKey, string> = {
 	'title.focus': 'Enfoque',
 	'title.short': 'Descanso corto',
 	'title.long': 'Descanso largo',
-	'title.app': 'Cute Timer',
-	'title.seo': 'Cute Timer — Temporizador Pomodoro cute en línea para estudiar',
+	'title.app': "Abby's Pomodoro",
+	'title.seo': "Abby's Pomodoro — A Little Focus, A Lot of Encouragement",
 
 	'notify.focusComplete': '¡Enfoque completado!',
 	'notify.snackMessage': '¡Yupi! Hora de un descanso para el snack ♡',

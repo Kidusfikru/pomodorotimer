@@ -8,14 +8,14 @@ const basePath = getBasePath(Astro.url.pathname);
 ---
 
 <header class="fixed inset-x-0 top-0 z-30 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] sm:px-6">
-	<a data-i18n-href="/" href={localizePath(lang, '/')} class="group flex items-center gap-2.5" data-i18n-aria="brand.homeAria" aria-label="Cute Pomodoro Timer home">
+	<a data-i18n-href="/" href={localizePath(lang, '/')} class="group flex items-center gap-2.5" data-i18n-aria="brand.homeAria" aria-label="Abby's Pomodoro home">
 		<span
 			class="grid h-11 w-11 place-items-center rounded-full border-2 border-[color-mix(in_srgb,var(--tomato)_55%,transparent)] bg-[var(--tomato-soft)] shadow-[0_3px_0_color-mix(in_srgb,var(--tomato)_35%,transparent)] transition-transform group-hover:-rotate-6 group-hover:scale-110"
 		>
 			<Mascot class="h-9 w-full" />
 		</span>
 		<span class="text-base font-bold tracking-tight">
-			<span data-i18n="brand.title">Cute Pomodoro</span> <span class="text-[var(--tomato)]">♡</span>
+			<span data-i18n="brand.title">Abby's Pomodoro</span> <span class="text-[var(--tomato)]">♡</span>
 		</span>
 	</a>
 

@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-	title = 'Cute Timer — Cute Pomodoro Timer Online for Studying',
-	description = 'A free cute timer online — an aesthetic pink pomodoro timer for studying with lo-fi music, a cute mascot, and 10, 15 & 30 minute countdowns. Start now.',
+	title = "Abby's Pomodoro — A Little Focus, A Lot of Encouragement",
+	description = "A cozy Pomodoro timer made just for Abby, with gentle music, a sweet little mascot, and room for everything she's working toward.",
 } = Astro.props;
 
 const lang = (Astro.currentLocale ?? DEFAULT_LANG) as LangCode;
@@ -50,7 +50,7 @@ const keywords = [
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'WebApplication',
-	name: 'Cute Timer',
+	name: "Abby's Pomodoro",
 	url: canonicalUrl,
 	description,
 	applicationCategory: 'UtilityApplication',
@@ -60,7 +60,7 @@ const schema = {
 	offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 	keywords,
 	inLanguage: lang,
-	audience: { '@type': 'Audience', audienceType: 'Students, remote workers, and anyone who loves a cute timer for studying' },
+	audience: { '@type': 'Audience', audienceType: 'Abby' },
 };
 ---
 
@@ -78,7 +78,7 @@ const schema = {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<meta name="apple-mobile-web-app-title" content="CuteTimer" />
+		<meta name="apple-mobile-web-app-title" content="Abby's Pomodoro" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="canonical" href={canonicalUrl} />
 		{(LANGUAGES as readonly { code: LangCode }[]).map(({ code }) => (
@@ -86,7 +86,7 @@ const schema = {
 		))}
 		<link rel="alternate" hreflang="x-default" href={absUrl(DEFAULT_LANG, basePath)} />
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Cute Timer" />
+		<meta property="og:site_name" content="Abby's Pomodoro" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
